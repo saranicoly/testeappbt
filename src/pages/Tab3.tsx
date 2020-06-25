@@ -1,13 +1,14 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Tab3.css';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,IonButtons,IonMenuButton,IonIcon } from '@ionic/react';
+import {optionsOutline} from "ionicons/icons" ;
+import "./Page.css";
 
 const Tab3: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
+        <IonToolbar class="new-background-color">
+          <IonButtons slot="end"><IonMenuButton><IonIcon size="large" icon={optionsOutline}></IonIcon></IonMenuButton></IonButtons>
           <IonTitle>Tab 3</IonTitle>
         </IonToolbar>
       </IonHeader>
@@ -17,7 +18,7 @@ const Tab3: React.FC = () => {
             <IonTitle size="large">Tab 3</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 3 page" />
+
       </IonContent>
     </IonPage>
   );
